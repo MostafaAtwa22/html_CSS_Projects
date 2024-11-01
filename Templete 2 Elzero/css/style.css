@@ -1,0 +1,108 @@
+/*Start Main*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--background-color);
+}
+ul {
+    list-style: none;
+}
+:root {
+    --font-color: #277e98;
+    --main-color:#353235;
+    --background-color:#1f2021;
+}
+.container {
+    padding: 0px 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Main */
+header {
+    position: fixed;
+    width: 100%;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #353235;
+}
+header .container .log img {
+    height: 40px;
+}
+header .container nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    color: white;
+    min-width: 97px;
+}
+header .container nav ul  {
+    display: block;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+header .container nav ul li a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+    padding: 30px 0;
+}
+header .container nav ul li a:hover, 
+header .container nav ul li a.active {
+    color: #277e98;
+    border-bottom: 2px solid #277e98;
+}
+header .container nav .form {
+    border-left: 1px white solid;
+    padding: 10px;
+    margin-left: 30px;
+}
+header .container nav .form i {
+    margin-left: 30px;
+}
+header .container nav .toggle-menu {
+    display: none;
+}
+@media (max-width: 768px) {
+    header .container nav .toggle-menu {
+        display: block;
+        width: 40px;
+    }
+    header .container nav {
+        justify-content: flex-end;
+    }
+    header .container nav ul {
+        display: none;
+    }
+}
