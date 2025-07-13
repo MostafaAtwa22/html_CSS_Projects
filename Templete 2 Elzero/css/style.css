@@ -15,7 +15,6 @@ html {
 }
 body {
     font-family: "Open Sans", sans-serif;
-    background-color: var(--background-color);
 }
 ul {
     list-style: none;
@@ -46,7 +45,53 @@ ul {
     }
 }
 /* End Global rules */
-
+/* start Component */
+.main-heading {
+    text-align: center;
+    padding: 100px 100px 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main-heading h2 {
+    position: relative;
+    font-size: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+.main-heading h2::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 70%;
+    height: 2px;
+    background-color: #333;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main-heading h2::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+}
+.main-heading p {
+    line-height: 2;
+    color: #777;
+    width: 500px;
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 100px;
+}
+/* End Component */
 /* Start header */
 header {
     position: absolute;
@@ -177,14 +222,14 @@ header nav .form i {
 .landing .text .content {
     max-width: 500px;
 }
-    @media (max-width: 767px) { 
-        .landing .text {
-            width: 100%;
-        }
-        .landing .text .content  {
-            max-width: 100%;
-        }
+@media (max-width: 767px) { 
+    .landing .text {
+        width: 100%;
     }
+    .landing .text .content  {
+        max-width: 100%;
+    }
+}
 .landing .text .content  h2 {
     line-height: 1.5;
     margin-bottom: 20px;
@@ -225,9 +270,46 @@ header nav .form i {
     height: 12px;
     border-radius: 50%;
     margin-left: 5px;
-    border: 1px solid var(--background-color);
+    border: 1px solid #ddd;
 }
 .landing .bullets li.active {
     background-color: var(--font-color);
 }
 /* end landing */
+/* start services */
+.services {
+    height: 100vh;
+}
+@media (min-width: 768px) {
+    .services .services-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+        row-gap: 50px;
+        column-gap: 30px;
+    }
+}
+.services .services-container .srv-box {
+    display: flex;
+}
+.services .services-container .srv-box i {
+    margin-right: 20px;
+}
+.services .services-container .srv-box .text h3 {
+    color: var(--font-color);
+    margin-bottom: 10px;
+}
+.services .services-container .srv-box .text p {
+    color: #777;
+    line-height: 2;
+}
+@media (max-width: 767px) {
+    .services .services-container .srv-box {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .services .services-container .srv-box i {
+        margin-bottom: 20px;
+    }
+}
+/* end services */
