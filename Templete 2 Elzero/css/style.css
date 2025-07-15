@@ -9,6 +9,7 @@
     --main-color:#353235;
     --background-color:#1f2021;
     --transparent-color: rgb(15 116 143 / 70%);
+    --main-padding: 100px;
 }
 html {
     scroll-behavior: smooth;
@@ -278,7 +279,7 @@ header nav .form i {
 /* end landing */
 /* start services */
 .services {
-    height: 100vh;
+    min-height: 100vh;
 }
 @media (min-width: 768px) {
     .services .services-container {
@@ -313,3 +314,191 @@ header nav .form i {
     }
 }
 /* end services */
+/* start desing */
+.desgin {
+    position: relative;
+    background-image: url(../images/desgin.jpg);
+    background-size: cover;
+    height: 600px;
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 50px;
+}
+.desgin::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+.desgin .text {
+    color: white;
+    margin-left: 50px;
+    background-color: var(--transparent-color);
+    position: relative;
+    padding: 50px;
+    z-index: 2;
+}
+@media (max-width: 767px) {
+    .desgin .text {
+        margin-left: 0;
+        width: 100%;
+    }
+    .desgin .img {
+        display: none !important;
+    }
+}
+.desgin .text,
+.desgin .img {
+    flex: 1;
+}
+.desgin .img {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+}
+.desgin .text h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.desgin img {
+    position: absolute;
+    width: 293px;
+    left: 10%;
+    bottom: -85px;
+}
+.desgin .text ul li {
+    padding: 10px;
+}
+.desgin .text ul li::before {
+    content: "\f108";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 20px;
+    color: white;
+}
+/* end desing */
+/* strat Protofolio */
+.portfolio {
+    padding-bottom: var(--main-padding);
+    min-height: 100vh;
+}
+.portfolio ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+}
+@media (max-width: 767px) {
+    .portfolio ul {
+        justify-content: space-evenly;
+        margin: 0;
+    }
+}
+.portfolio ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-bottom: 2px solid transparent;
+}
+.portfolio ul li.active,
+.portfolio ul li:hover {
+    background-color: var(--font-color);
+    color: white;
+}
+.portfolio .imgs-container {
+    position: relative;
+    margin-top: 30px;
+    display: grid;
+}
+.portfolio .imgs-container div {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio .imgs-container div:hover .text {
+    bottom: 0;
+}
+.portfolio .imgs-container div:hover img {
+    transform: rotate(-3deg) scale(1.2);
+}
+.portfolio .imgs-container div img {
+    background-size: cover;
+    width: 100% !important;
+    height: 100% !important;
+    transition: 0.3s;
+}
+.portfolio .imgs-container div .text {
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    left: 0;
+    bottom: -100px;
+    width: 100%;
+    padding: 20px;
+    transition: 0.3s;
+}
+.portfolio .imgs-container div:hover .text h4 {
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.portfolio .imgs-container div:hover .text p {
+    color: var(--font-color);
+}
+/* Mobile */
+@media (max-width: 767px) {
+    .portfolio .imgs-container {
+        display: block;
+    }
+    .portfolio .imgs-container img {
+        width: 100%;
+    }
+}
+/* Small */
+@media (min-width: 768px) {
+    .portfolio .imgs-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .portfolio .imgs-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .portfolio .imgs-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+.portfolio a {
+    display: block;
+    padding: 15px 20px;
+    width: fit-content; 
+    color: white;
+    background-color: var(--font-color);
+    margin: 30px auto;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.portfolio a:hover {
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.18), 0 1.5px 6px 0 rgba(0,0,0,0.12);
+}
+/* end Protofolio */
