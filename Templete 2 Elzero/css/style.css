@@ -648,3 +648,179 @@ header nav .form i {
     bottom: -42px;
 }
 /* End Statistics */
+/* Start skills */
+.skills {
+    position: relative;
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+.skills .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.skills .container > div {
+    flex-basis: 45%;
+}
+@media (max-width: 992px) {
+    .skills .container > div {
+        flex-basis: 100%;
+    }
+    .skills .container .our-skills {
+        margin-top: 80px;
+    }
+}
+.skills .container .caption {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.skills .container .caption h3 {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-weight: normal;
+    font-size: 30px;
+}
+.skills .container .testimonials {
+    position: relative;
+}
+.skills .container .caption p,
+.skills .container .testimonials .personalinfo p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #777;
+}
+@media (max-width: 767px) {
+    .skills .container .testimonials .personalinfo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skills .container .testimonials .personalinfo p {
+        margin-top: 20px;
+    }
+}
+.skills .container .testimonials .personalinfo {
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+}
+.skills .container .testimonials .personalinfo::before {
+    content: 'Jone Doe, CEO';
+    color: #777;
+    font-style: italic;
+    position: absolute;
+    font-size: 12px;
+    right: 0;
+    bottom: 5px;
+}
+.skills .container .testimonials .personalinfo p {
+    line-height: 2;
+    border-bottom: 3px solid #ddd;
+}
+.skills .container .testimonials img {
+    width: 100px;
+    margin-right: 50px;
+}
+.skills .container .testimonials ul {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.skills .container .testimonials ul li {
+    margin-left: 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--background-color);
+}
+.skills .container .testimonials ul li.active {
+    background-color: var(--font-color);
+}
+.skills .container .our-skills .my-skills .prog-holder h4 {
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.skills .container .our-skills .my-skills .prog-holder .prog {
+    margin: 15px 0 30px 0;
+    height: 30px;
+    background-color: #dedadc;
+}
+.skills .container .our-skills .my-skills .prog-holder .prog span {
+    display: block;
+    background-color: var(--font-color);
+    height: 100%;
+    position: relative;
+}
+.skills .container .our-skills .my-skills .prog-holder .prog span::after {
+    content: attr(data-prgoress);
+    background-color: var(--background-color);
+    position: absolute;
+    top: -40px;
+    color: white;
+    padding: 5px 0;
+    width: 40px;
+    text-align: center;
+    border-radius: 3px;
+    right: calc(0% - 20px);
+}
+.skills .container .our-skills .my-skills .prog-holder .prog span::before {
+    content: '';
+    position: absolute;
+    border: 8px solid var(--background-color);
+    border-color: var(--background-color) transparent transparent transparent;
+    right: calc(0% - 8px);
+    top: -12px;
+}
+/* End skills */
+/* Start quote  */
+.quote {
+    position: relative;;
+    background-image: url("../images/video.jpg");
+    background-size: cover;
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+.quote::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.quote .container {
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.quote .container p {
+    position: relative;
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+.quote .container p::before {
+    content: "\f10d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    font-size: 24px;
+    vertical-align: text-top;
+}
+.quote .container p::after {
+    content: "\f10e";
+    font-family: "Font Awesome 6 Free";
+    position: absolute;
+    font-weight: 900;
+    margin-left: 10px;
+    font-size: 24px;
+    vertical-align: middle;
+}
+/* End quote  */
