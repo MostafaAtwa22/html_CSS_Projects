@@ -882,7 +882,328 @@ header .mega-menu .links li a i {
     font-size: 18px
 }
 /* End How It Works */
-/* Start Animation */
+/* Start Events */
+.events {
+    padding: var(--main-padding) 0;
+    position: relative;
+}
+.events .container {
+    display: flex;
+    align-items: center; 
+    flex-wrap: wrap;
+}
+.events img {
+    max-width: 450px;
+}
+@media (max-width: 991px) {
+    .events img {
+        display: none;
+    }
+}
+.events .info {
+    flex: 1;
+}
+.events .info .time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; 
+}
+.events .info .time .unit {
+    text-align: center;
+    border: 1px solid #D4D4D4;
+    border-radius: 6px;
+    transition: var(--main-transition);
+}
+.events .info .time .unit:hover,
+.events .info .time .unit:hover span:last-of-type {
+    border-color: var(--main-color-alt);
+}
+.events .info .time .unit span {
+    display: block;
+    transition: var(--main-transition);
+}
+.events .info .time .unit span:first-of-type {
+    color: var(--main-color);
+    font-size: 35px;
+    padding: 15px;
+}
+.events .info .time .unit span:last-of-type {
+    color: #777;
+    font-size: 14px;
+    padding: 10px 0;
+    border-top: 1px solid #D4D4D4;
+}
+.events .info h3 {
+    font-size: 35px;
+    text-align: center;
+    margin: 40px 0 0;
+}
+@media (max-width: 767px) {
+    .events .info h3 {
+        font-size: 25px;
+    }
+}
+.events .info p {
+    margin-top: 40px;
+    text-align: center;
+    line-height: 1.8;
+    color: #666 ;
+}
+.events .subscribe {
+    width: 100%;
+    margin-top: 60px;
+}
+.events .subscribe form {
+    padding: 30px;
+    background-color: var(--background-color);
+    width: fit-content;
+    border-radius: 50px;
+    margin: auto;
+}
+.events .subscribe form input {
+    padding: 15px;
+    border-radius: inherit;
+    border: none;
+    outline: none;
+}
+@media (max-width: 767px) {
+    .events .subscribe form {
+        border-radius: 0;
+        width: 100%;
+    }
+}
+.events .subscribe form input[type='email'] {
+    width: 400px;
+    caret-color: var(--main-color-alt);
+    margin-right: 10px;
+}
+.events .subscribe form input[type='email']::placeholder {
+    transition: opacity var(--main-transition);
+}
+.events .subscribe form input[type='email']:focus::placeholder {
+    opacity: 0;
+}
+@media (max-width: 767px) {
+    .events .subscribe form input[type='email'] {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+.events .subscribe form input[type='submit'] {
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--main-transition);
+}
+.events .subscribe form input[type='submit']:hover {
+    background-color: var(--main-color-alt);
+}
+@media (max-width: 767px) {
+    .events .subscribe form input[type='submit'] {
+        border-radius: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+/* End Events */
+/* Start Pricing */
+.pricing {
+    position: relative;
+    padding: var(--main-padding) 0;
+    background-color: var(--background-color);
+}
+.pricing .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.pricing .box {
+    background-color: white;
+    padding: 30px 0;
+    box-shadow: 0px 12px 20px 0px rgb(0 0 0 /  13%),
+    0px 2px 4px 0px rgb(0 0 0 / 12%);
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+.pricing .box::before, 
+.pricing .box::after {
+    content: '';
+    position: absolute;
+    height: 50%;
+    width: 0%;
+    background-color: #f6f6f6;
+    z-index: -1;
+    transition: var(--main-transition);
+}
+.pricing .box::before {
+    right: 0;
+    top: 0;
+}
+.pricing .box::after {
+    left: 0;
+    bottom: 0;
+}
+.pricing .box:hover::before,
+.pricing .box:hover::after {
+    width: 100%;
+}
+@media (min-width: 1200px) {
+    .pricing .box.popular {
+        transform: translateY(-20px);
+    }
+}
+.pricing .box.popular .label {
+    position: absolute;
+    background-color: var(--main-color);
+    writing-mode: vertical-lr;
+    color: white;
+    padding: 10px 10px 40px 10px;
+    font-weight: bold;
+    top: 0;
+    right: 10%;
+    width: 40px;
+}
+.pricing .box.popular .label::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+    border-width: 20px;
+    left: 0;
+    bottom: 0;
+}
+.pricing .box h3 {
+    text-align: center;
+    font-size: 22px;
+    margin: 0;
+}
+.pricing .box img {
+    width: 80px;
+    margin: 20px 0;
+}
+.pricing .box h2 {
+    font-size: 60px;
+    color: var(--main-color);
+    text-align: center;
+}
+.pricing .box span {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+}
+.pricing .box ul {
+    margin: 30px 0;
+    text-align: left;
+}
+.pricing .box ul li {
+    padding: 20px;
+    color: #333;
+    border-top: 1px solid #D4D4D4;
+}
+.pricing .box ul li::before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f00c';
+    color: var(--main-color);
+    font-weight: 900;
+    margin-right: 10px;
+}
+.pricing .box a {
+    width: fit-content;
+    position: relative;
+    display: block;
+    margin: auto;
+    padding: 15px 20px;
+    border: 4px solid var(--main-color);
+    border-radius: 5px;
+    color: var(--main-color);
+    font-weight: bold;
+    transition: var(--main-transition);
+    z-index: 2;
+}
+.pricing .box a::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: var(--main-color-alt);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: var(--main-transition);
+}
+.pricing .box a:hover {
+    color: white;
+}
+.pricing .box a:hover::before {
+    width: 100%;
+}
+/* End Pricing */
+/* Start Video */
+.video {
+    padding: var(--main-padding) 0;
+    position: relative;
+}
+.video .holder {
+    border: 1px solid #dddddd;
+    display: flex;
+}
+@media (max-width: 991px) {
+    .video .holder {
+        flex-direction: column;
+    }
+}
+.video .holder .list {
+    max-width: 100%;
+    /* width:  fit-content; */
+}
+.video .holder .list .name {
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+}
+.video .holder .list .name i {
+    color: var(--main-color);
+}
+.video .holder .list  ul li {
+    padding: 20px 40px 20px 20px;
+    cursor: pointer;
+    transition: var(--main-transition);
+    border-top: 1px solid #dddddd;
+}
+.video .holder .list  ul li:hover {
+    background-color: #FAFAFA;
+    color: var(--main-color);
+}
+.video .holder .list  ul li p {
+    margin-bottom: 10px;
+    transition: var(--main-transition);
+}
+.video .holder .list  ul li span {
+    color: #777;
+}
+.video .holder .preview {
+    flex: 1;
+    padding: 15px;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.video .holder .preview img {
+    width: 100%;
+}
+.video .holder .preview .info {
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
+}
+/* End Video */
+/* Start Animation */   
 @keyframes left-move {
     50% {
         left: 0px;
