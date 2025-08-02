@@ -16,6 +16,7 @@ html {
 }
 body {
     font-family: "Open Sans", sans-serif;
+    position: relative;
 }
 ul {
     list-style: none;
@@ -114,6 +115,30 @@ a {
 .dots-down {
     bottom: 200px;
     left: 0;
+}
+button.up-page {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    background-color: var(--main-color);
+    transition: var(--main-transition);
+    border: 1px solid #333;
+    cursor: pointer !important; 
+    z-index: 9999; 
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+button.up-page:hover {
+    background-color: var(--main-color-alt);
+}
+button.up-page.active {
+    display: block;
 }
 /* End Global rules */
 /* Start Header */
