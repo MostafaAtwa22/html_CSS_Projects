@@ -8,6 +8,9 @@
 .align-items-center {
   align-items: center;
 }
+.justify-content-space-between {
+  justify-content: space-between;
+}
 /* End Box */
 /* Start Padding + Margin */
 .p-10 {
@@ -51,6 +54,11 @@
   position: fixed;
 }
 /* End Postion */
+/* Start Width + Height */
+.w-100 {
+  width: 100%;
+}
+/* End Width + Height */
 /* Start Text */
 .text-center {
   text-align: center;
@@ -79,3 +87,10 @@
   }
 }
 /* End Media */
+/* Start Component */
+.between-center-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* End Component */
