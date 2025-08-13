@@ -1,4 +1,12 @@
 /* Start Box */
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+}
 .d-flex {
   display: flex;
 }
@@ -10,6 +18,26 @@
 }
 .justify-content-space-between {
   justify-content: space-between;
+}
+.justify-content-space-around {
+  justify-content: space-around;
+}
+.d-grid {
+  display: grid;
+}
+.gap-20 {
+  gap: 20px;
+}
+.d-block {
+  display: block;
+}
+@media (max-width: 767px) {
+  .d-block-mobile {
+    display: block;
+  }
+  .hide-mobile {
+    display: none;
+  }
 }
 /* End Box */
 /* Start Padding + Margin */
@@ -25,8 +53,23 @@
 .mt-0 {
   margin-top: 0;
 }
+.mt-5 {
+  margin-top: 5px;
+}
 .mt-20 {
   margin-top: 20px;
+}
+.mt-5 {
+  margin-top: 5px;
+}
+.mt-50 {
+  margin-top: 50px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mb-50 {
+  margin-bottom: 50px;
 }
 .m-auto {
   margin: auto;
@@ -39,8 +82,38 @@
 .bg-white {
   background-color: white;
 }
+.bg-blue {
+  background-color: var(--blue-color);
+}
+.bg-orange {
+  background-color: var(--orange-color);
+}
+.bg-green {
+  background-color: var(--green-color);
+}
+.bg-red {
+  background-color: var(--red-color);
+}
 .color-black {
   color: black;
+}
+.color-grey {
+  color: var(--grey-color);
+}
+.color-white {
+  color: white;
+}
+.color-blue {
+    color: var(--blue-color);
+}
+.color-orange {
+  color: var(--orange-color);
+}
+.color-green {
+  color: var(--green-color);
+}
+.color-red {
+  color: var(--red-color);
 }
 /* End Color */
 /* Start Postion */
@@ -58,10 +131,18 @@
 .w-100 {
   width: 100%;
 }
+.w-fit {
+  width: fit-content;
+}
 /* End Width + Height */
 /* Start Text */
 .text-center {
   text-align: center;
+}
+@media (max-width: 767px) {
+  .text-center-mobile {
+    text-align: center;
+  }
 }
 .text-right {
   text-align: right;
@@ -79,6 +160,9 @@
 .rad-6 {
   border-radius: 6px;
 }
+.rad-10 {
+  border-radius: 10px;
+}
 /* End Border */
 /* Start Media */
 @media (max-width: 767px) {
@@ -92,5 +176,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.btn-shape {
+  padding: 4px 10px;
+  border-radius: 6px;
 }
 /* End Component */

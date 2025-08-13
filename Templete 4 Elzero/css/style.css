@@ -140,4 +140,177 @@ ul {
   height: 32px;
   margin-left: 12px;
 }
+.content .info .dash {
+  font-size: 40px;
+}
+.content .info > h2::before,
+.content .info > h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 3px;
+  border-radius: 6px;
+}
+.content .info > h2::before {
+  width: 150px;
+  background-color: white;
+}
+.content .info > h2::after {
+  width: 50px;
+  background-color: black;
+}
+@media (max-width: 767px) {
+  .info {
+    padding: 10px;
+  }
+}
+.info .wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+.info .wrapper > div {
+  box-shadow: 0 0 10px #ddd;
+}
+@media (max-width: 767px) {
+  .info .wrapper {
+    grid-template-columns: minmax(200px, 1fr);
+    gap: 10px;
+  }
+}
+/* Start welcome */
+.welcome {
+  overflow: hidden;
+}
+.welcome .intro img {
+  width: 200px;
+  margin-bottom: -10px
+}
+.welcome .avater {
+  width: 64px;
+  height: 64px;
+  border: 4px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #ddd;
+  margin-left: 32px;
+  margin-top: -32px;
+}
+.welcome .body {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.welcome a {
+  margin: 15px 15px 15px auto;
+  transition: 0.5s;
+}
+.welcome a:hover {
+  background-color: var(--blue-alt-color);
+}
+@media (max-width: 767px) {
+  .welcome .avater {
+    margin-left: 0;
+  }
+  .welcome .body > div:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+/* End welcome */
+/* Start Draft */
+.draft input,
+.draft textarea, 
+.draft button {
+  outline: none;
+  border: none;
+}
+.draft input,
+.draft textarea {
+  font-size: 18px;
+}
+.draft textarea {
+  min-height: 180px;
+  resize: none;
+}
+.draft button {
+  margin: 30px 0 0 auto;
+  cursor: pointer;
+}
+/* End Draft */
+/* Start Yearly Targets */
+.targets .box {
+  margin-top: 30px;
+}
+.targets .box > div {
+  flex: 1;
+}
+.targets .box span {
+  align-content: center;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+}
+.targets .box .progress div {
+  margin-top: 10px;
+  height: 5px;
+}
+.targets .box:first-child .progress div,
+.targets .box:first-child .progress div::after {
+  background-color: var(--blue-color);
+}
+.targets .box:nth-child(2) .progress div,
+.targets .box:nth-child(2) .progress div::after{
+  background-color: var(--orange-color);
+}
+.targets .box:last-child .progress div,
+.targets .box:last-child .progress div::after {
+  background-color: var(--green-color);
+}
+.targets .box .progress::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  background-color: red;
+  z-index: 1;
+}
+.targets .box .progress div::after {
+  content: attr(data-progress);
+  color: white;
+  position: absolute;
+  padding: 4px 6px;
+  border-radius: 6px;
+  top: -40px;
+  right: -20px;
+}
+.targets .box .progress div::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  border: 10px solid;
+  top: -15px;
+  right: -9px;
+}
+.targets .box:first-child .progress div::before {
+  border-color: var(--blue-color) transparent transparent transparent;
+}
+.targets .box:nth-child(2) .progress div::before {
+  border-color: var(--orange-color) transparent transparent transparent;
+}
+.targets .box:last-child .progress div::before {
+  border-color: var(--green-color) transparent transparent transparent;
+}
+.targets .box:first-child span, 
+.targets .box:first-child .progress::before {
+  background-color: #0077ff5b;
+}
+.targets .box:nth-child(2) span, 
+.targets .box:nth-child(2) .progress::before {
+  background-color: #f59f0b6a;
+}
+.targets .box:nth-child(3) span, 
+.targets .box:nth-child(3) .progress::before {
+  background-color: #22c55e53;
+}
+/* End Yearly Targets */
 /* End content */
