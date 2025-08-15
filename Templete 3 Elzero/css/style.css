@@ -855,6 +855,7 @@ header .mega-menu .links li a i {
     top: 0;
     background-color: var(--main-color);
     height: 100%;
+    transition: 0.5s linear;
 }
 /* End Skills */
 /* Start How It Works */
