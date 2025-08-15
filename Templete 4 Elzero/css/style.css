@@ -397,4 +397,223 @@ ul {
   padding: 5px 15px;
 }
 /* End Search */
+/* Start Latest Uploads */
+.uploads .box {
+  padding: 15px 0;
+}
+.uploads .box:not(:last-child) {
+  border-bottom: 1px solid #cccccc94;
+}
+.uploads .box img {
+  width: 50px;
+  margin-right: 10px;
+}
+.uploads .box .file {
+  flex: 1;
+}
+.uploads .box .file div p:first-child {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+@media (max-width: 767px) {
+  .uploads .box .file div p:first-child {
+    font-size: 15px;
+  }
+}
+/* Start Latest Uploads */
+/* Start Projects */
+.projects .body{
+  align-items: flex-end;
+}
+.projects .progress {
+  flex: 1;
+}
+
+.projects img {
+  width: 180px;
+  height: 180px;
+  opacity: 0.2;
+}
+.projects .progress .box {
+  padding: 15px 0;
+  font-size: 20px;
+}
+.projects .progress .box span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: solid 2px var(--blue-color);
+  margin-right: 15px;
+  position: relative;
+}
+.projects .progress .box:not(:last-child) span::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 32px;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--blue-color);
+}
+.projects .progress .box:not(:last-child) span::before {
+  content: '';
+  position: absolute;
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--blue-color);
+  border-radius: 50%;
+}
+.projects .progress .box:nth-child(4) span::before {
+  animation: opacity-change linear 1s infinite alternate backwards;
+}
+@keyframes opacity-change {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* End Projects */
+/* Start reminders */
+.reminders-body {
+  align-items: center;
+}
+.reminders .box {
+    padding: 5px 0 5px 20px;
+    border-left: 3px solid;
+}
+.reminders-body:nth-child(2) .box {
+  border-left-color: var(--blue-color);
+}
+.reminders-body:nth-child(3) .box {
+  border-left-color: var(--green-color);
+}
+.reminders-body:nth-child(4) .box {
+  border-left-color: var(--orange-color);
+}
+.reminders-body:nth-child(5) .box {
+  border-left-color: var(--red-color);
+}
+.reminders-body span {
+  display: block;
+  margin-right: 15px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+} 
+.reminders-body:nth-child(2) span {
+  background-color: var(--blue-color);
+}
+.reminders-body:nth-child(3) span {
+  background-color: var(--green-color);
+}
+.reminders-body:nth-child(4) span {
+  background-color: var(--orange-color);
+}
+.reminders-body:nth-child(5) span {
+  background-color: var(--red-color);
+}
+/* End reminders */
+/* Start Posts */
+.posts .name {
+  padding: 20px 0;
+  border-bottom: 1px solid hsl(0, 0%, 20%, 20%);
+}
+.posts .name img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.posts .comment {
+  font-size: 20px;
+  line-height: 2;
+  border-bottom: 1px solid hsl(0, 0%, 20%, 20%);
+}
+.posts .reacts {
+  padding: 30px 0 20px;
+}
+.posts .icon {
+  font-size: 18px;
+}
+/* End Posts */
+/* Start Social */
+.social .box {
+  position: relative;
+}
+.social .box div {
+  padding: 20px 20px 20px 83px;
+  flex: 1;
+}
+.social .box:nth-child(2) div {
+    background-color: hsl(203, 89%, 53%, 40%);
+}
+.social .box:nth-child(3) div {
+    background-color: hsl(203, 89%, 53%, 40%);
+}
+.social .box:nth-child(4) div {
+    background-color: hsl(0, 100%, 50%, 40%);
+}
+.social .box:nth-child(5) div {
+    background-color: hsl(203, 89%, 53%, 40%);
+}
+.social .box:nth-child(2) div p {
+    color: #1da1f2;
+}
+.social .box:nth-child(3) div p {
+    color: #1877f2;
+}
+.social .box:nth-child(4) div p {
+    color: #ff0000;
+}
+.social .box:nth-child(5) div p {
+    color: #0077b5;
+}
+.social .box div p {
+  font-size: 18px;
+}
+.social .box > span {
+  position: absolute;
+  display: block;
+  width: 63px;
+  height: 100%;
+  text-align: center;
+  line-height: 80px;
+  transition: 0.5s;
+  transform-origin: center;
+}
+.social .box > span:hover {
+  transform: rotate(6deg);
+}
+.social .box:nth-child(2) > span,
+.social .box:nth-child(2) button {
+    background-color: #1da1f2;
+}
+.social .box:nth-child(3) > span,
+.social .box:nth-child(3) button {
+    background-color: #1877f2;
+}
+.social .box:nth-child(4) > span,
+.social .box:nth-child(4) button {
+    background-color: #ff0000;
+}
+.social .box:nth-child(5) > span,
+.social .box:nth-child(5) button {
+    background-color: #0077b5;
+}
+.social .box div p {
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .social .box div p {
+    font-size: 14px;
+  }
+}
+/* End Social */
 /* End content */
