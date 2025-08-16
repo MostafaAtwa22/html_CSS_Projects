@@ -428,7 +428,11 @@ ul {
 .projects .progress {
   flex: 1;
 }
-
+@media (max-width: 767px) {
+  .projects p {
+    font-size: 14px;
+  }
+}
 .projects img {
   width: 160px;
   opacity: 0.2;
@@ -615,4 +619,46 @@ ul {
   }
 }
 /* End Social */
+/* Start Projects-table */
+.projects-table .responsive-table {
+  overflow-x: auto;
+}
+.projects-table {
+  text-align: left;
+}
+.projects-table table {
+  min-width: 1000px;
+    border-spacing: 0;
+}
+.projects-table table tr td,
+.projects-table table tr th {
+  margin: 0;
+  padding: 15px;
+}
+.projects-table table tr th:not(:last-child) {
+  border-left: 1px solid #EEE;
+}
+.projects-table table tbody td {
+  border-left: 1px solid #EEE;
+  border-bottom: 1px solid #EEE;
+}
+.projects-table table tbody tr {
+  transition: .5s;
+}
+.projects-table table tbody tr:hover {
+  background-color: #EEE;
+}
+.projects-table table tbody td:last-child {
+  border-right: 1px solid #faf7f7;
+}
+.projects-table img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #ffff;
+}
+.projects-table .team img:not(:first-child) {
+  margin-left: -20px;
+}
+/* End Projects-table */
 /* End content */
