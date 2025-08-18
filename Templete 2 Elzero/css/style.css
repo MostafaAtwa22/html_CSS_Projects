@@ -192,7 +192,6 @@ header nav .form i {
 /* End header */
 /* start landing */
 .landing {
-    background-image: url(../images/owl.jpg);
     background-color: var(--background-color);
     background-size: cover;
     width: 100%;
@@ -200,13 +199,29 @@ header nav .form i {
     color: white;
     position: relative;
 }
-.landing .overlay {
+.landing img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    opacity: 0;
+}
+.landing img.active {
+    opacity: 1;
+}
+.landing::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 .landing .text {
     position: absolute;
@@ -265,16 +280,23 @@ header nav .form i {
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 2;
 }
 .landing .bullets li {
     width: 12px;
     height: 12px;
     border-radius: 50%;
     margin-left: 5px;
-    border: 1px solid #ddd;
+    border: 2px solid white;
+    cursor: pointer;
 }
 .landing .bullets li.active {
     background-color: var(--font-color);
+    transform: scale(1.3);
+}
+.landing i.disabled {
+    pointer-events: none;
+    opacity: 0.5;
 }
 /* end landing */
 /* start services */
@@ -750,9 +772,10 @@ header nav .form i {
     background-color: var(--font-color);
     height: 100%;
     position: relative;
+    transition: 2s;
 }
 .skills .container .our-skills .my-skills .prog-holder .prog span::after {
-    content: attr(data-prgoress);
+    content: attr(data-width);
     background-color: var(--background-color);
     position: absolute;
     top: -40px;
