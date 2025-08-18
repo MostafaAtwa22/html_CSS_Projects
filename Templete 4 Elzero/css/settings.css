@@ -1,0 +1,236 @@
+/* Start Site Control */
+.toggle-check {
+  appearance: none;
+}
+.toggle-switch {
+  width: 78px;
+  height: 32px;
+  background-color: #ccc;
+  border-radius: 16px;
+  transition: 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+.toggle-switch::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00d";
+  font-weight: 900;
+  background-color: white;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 4px;
+  color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.toggle-check:checked + .toggle-switch {
+  background-color: var(--blue-color);
+}
+.toggle-check:checked + .toggle-switch::before {
+  content: "\f00c";
+  left: 48px;
+  color: var(--blue-color);
+}
+.site-control .control {
+  margin-top: 30px;
+}
+.site-control textarea {
+  height: 170px;
+  resize: none;
+  margin-top: 30px;
+}
+.site-control textarea::placeholder {
+  color: var(--grey-color);
+}
+/* End Site Control */
+/* Start general-info */
+.general-info input {
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+.general-info input:disabled {
+  color: var(--grey-color);
+  background-color: #0077ff17;
+  cursor: no-drop;
+}
+.general-info input:focus {
+  outline: none;
+}
+.general-info input[type='email'] {
+  width: 82%;
+}
+.general-info input[type='submit'] {
+  width: 18%;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .general-info input[type='submit'] {
+    font-size: 16px;
+    width: 30%;
+  }
+}
+/* End general-info */
+/* Start Security info */
+.security-info .box {
+  padding: 20px 0;
+}
+.security-info .box:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+.security-info .box h4 {
+  font-size: 18px;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+.security-info .box button {
+  cursor: pointer;
+  font-size: 18px;
+}
+.security-info .box .pass {
+  transition: 0.5s;
+}
+.security-info .box .pass:hover {
+    background-color: var(--blue-alt-color);
+}
+/* End Security info */
+/* Start Social Info */
+.social-info input {
+  background-color: #eeeeee58;
+  padding-left: 50px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+.social-info input:focus {
+  outline: none;
+}
+.social-info form > div i {
+  color: var(--grey-color);
+  transition: 0.5s;
+}
+.social-info form > div:focus-within i {
+  color: var(--blue-color);
+}
+.social-info label {
+  height: 38px;
+  position: absolute;
+  z-index: 1;
+  color: var(--grey-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 10px;
+  border-right: 1px solid #ccc;
+  padding-right: 10px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .social-info label {
+    padding-left: 10px;
+  }
+}
+/* End Social Info */
+/* Start widgets-control */
+.widgets-control .check {
+  padding: 12px 0;
+}
+.widgets-control .check input {
+  appearance: none;
+}
+.widgets-control .check label {
+  padding-left:20px;
+  cursor: pointer;
+  position: relative;
+}
+.widgets-control .check label::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--grey-color);
+  left: -15px;
+  top: 50%;
+  margin-top: -12px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.widgets-control .check label:hover::after {
+  border-color: var(--blue-alt-color);
+}
+.widgets-control .check label::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00c";
+  font-weight: bold;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  left: -14px;
+  top: 50%;
+  margin-top: -12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: white;
+  transition: 0.5s;
+  transform: scale(0);
+}
+.widgets-control .check input:checked + label::before {
+  background-color: var(--blue-color);
+  transform: scale(1) rotate(360deg); 
+}
+/* End widgets-control */
+/* start backup-manager */
+.backup-manager form .time {
+  padding: 10px;
+  border-bottom: 1px solid #cccccc76;
+}
+.backup-manager .info {
+  padding: 8px 0;
+}
+.backup-manager .info input {
+  width: 25px;
+  height: 25px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.backup-manager .info label {
+  cursor: pointer;
+}
+.backup-manager .servers {
+  border-top: 1px solid #eee;
+  padding-top: 25px;
+  gap: 5px;
+}
+.backup-manager .servers .server {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  border: 2px solid #eee;
+  transition: 0.5s;
+}
+@media (max-width: 768px) {
+  .backup-manager .servers   {
+    flex-wrap: wrap;
+  }
+}
+.backup-manager .servers .server label {
+  cursor: pointer;  
+}
+.backup-manager .servers input {
+  appearance: none;
+}
+.backup-manager .servers input:checked + .server {
+  border-color: var(--blue-alt-color);
+  color: var(--blue-color);
+}
+/* end backup-manager */
