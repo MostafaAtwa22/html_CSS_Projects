@@ -443,6 +443,7 @@ header nav .form i {
     color: white;
 }
 .portfolio .imgs-container {
+    min-height: 500px;
     position: relative;
     margin-top: 30px;
     display: grid;
@@ -450,6 +451,7 @@ header nav .form i {
 .portfolio .imgs-container div {
     position: relative;
     overflow: hidden;
+    transition: 0.5s;
 }
 .portfolio .imgs-container div:hover .text {
     bottom: 0;

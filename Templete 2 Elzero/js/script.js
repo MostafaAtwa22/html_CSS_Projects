@@ -118,3 +118,29 @@ function startCount(value) {
         }
     }, 20);
 }
+
+// protoflio filteration
+let portfolioList = document.querySelectorAll('.portfolio .shuffle li');
+let portfolioItems = Array.from(document.querySelectorAll('.portfolio .imgs-container > div'));
+
+portfolioList.forEach((li) => {
+    li.addEventListener('click', removeActive);
+    li.addEventListener('click', manageItems);
+})
+
+function removeActive () {
+    portfolioList.forEach((li) => {
+        li.classList.remove('active');
+        this.classList.add('active');
+    })
+}
+
+function manageItems () {
+    portfolioItems.forEach((item) => {
+        item.style.display = 'none';
+    });
+
+    document.querySelectorAll(this.dataset.filter).forEach((item) => {
+        item.style.display = 'block';   
+    })
+}
