@@ -28,6 +28,9 @@
 .d-grid {
   display: grid;
 }
+.gap-10 {
+  gap: 10px;
+}
 .gap-20 {
   gap: 20px;
 }
@@ -213,6 +216,9 @@
 }
 .rad-10 {
   border-radius: 10px;
+}
+.rad-half {
+  border-radius: 50%;
 }
 /* End Border */
 /* Start Media */
