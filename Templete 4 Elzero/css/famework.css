@@ -53,6 +53,9 @@
 .p-20 {
   padding: 20px;
 }
+.pt-10 {
+  padding-top: 10px;
+}
 .pt-20 {
   padding-top: 20px;
 }
@@ -88,6 +91,9 @@
 }
 .mt-40 {
   margin-top: 40px;
+}
+.me-5 {
+  margin-right: 5px;
 }
 .me-10 {
   margin-right: 10px;
